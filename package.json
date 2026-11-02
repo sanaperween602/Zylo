@@ -1,3 +1,4 @@
+
 {
   "name": "zylo",
   "private": true,
@@ -26,8 +27,12 @@
     "apps/*",
     "packages/*"
   ],
+  "overrides": {
+    "@prisma/orm-toolchain": "8.0.0-rc.22"
+  },
   "dependencies": {
     "@types/ws": "^8.18.2",
+    "prisma": "^8.0.0-rc.29",
     "ws": "^8.22.0"
   }
 }
