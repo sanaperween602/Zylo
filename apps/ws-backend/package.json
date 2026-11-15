@@ -21,7 +21,8 @@
     "@types/ws": "^8.18.2",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
-    "@repo/backend-common":"*"
+    "@repo/backend-common":"*",
+    "@repo/db":"*"
   },
   "keywords": [],
   "author": "",

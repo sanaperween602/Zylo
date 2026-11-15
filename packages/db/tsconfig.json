@@ -1,12 +1,13 @@
 {
     "extends": "@repo/typescript-config/base.json",
     "compilerOptions": {
-        "module": "preserve",
-        "moduleResolution": "bundler",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "rootDir": "src",
+        "outDir": "dist",
         "resolveJsonModule": true,
-        "types": [
-            "node"
-        ]
+        "types": ["node"]
     },
-  
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "migrations", "dist"]
 }

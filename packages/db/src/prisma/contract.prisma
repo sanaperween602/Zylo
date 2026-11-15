@@ -19,15 +19,17 @@
 //   createdAt TimestamptzString @default(now())
 //   updatedAt temporal.UpdatedAtString
 // }
+
 model User{
  id String @id @onCreate(uuid())
-  email    String 
+  email    String  @unique
   password String 
-  name    String 
-  photo String 
+  name    String ?
+  photo String ?
   rooms   Room[]
   chats   Chat[]
 }
+
 model Room {
   id  Int @id @default(autoincrement())
   slug String @unique
@@ -36,6 +38,7 @@ model Room {
   admin  User @relation(fields:[adminId],references:[id]) 
   chats Chat[]
 }
+
 model Chat {
   id Int @id @default(autoincrement())
   message String

@@ -2,8 +2,12 @@
   "name": "@repo/db",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "exports":{
+    "./client":"./dist/index.js"
+  },
   "scripts": {
+    "build": "tsc -p tsconfig.json && cp src/prisma/contract.d.ts dist/prisma/contract.d.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "prisma skills sync || exit 0",
     "contract:emit": "prisma contract emit"
